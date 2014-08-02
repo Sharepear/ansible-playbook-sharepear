@@ -18,4 +18,13 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--memory", $MEMORY]
     v.customize ["modifyvm", :id, "--cpus", $CPUS]
   end
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.sudo = true
+    ansible.playbook = "playbook.yml"
+    ansible.limit = "vagrant"
+    ansible.inventory_path = "hosts/vagrant"
+    ansible.verbose = "vvvv"
+    #ansible.tags = "config"
+  end
 end
