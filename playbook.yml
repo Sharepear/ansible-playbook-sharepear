@@ -5,5 +5,7 @@
   sudo: yes
   vars_files:
     - vars/iptables.yml
+    - vars/fail2ban.yml
   roles:
     - { role: Stouts.iptables, tags: iptables }
+    - { role: nickjj.fail2ban, tags: fail2ban }

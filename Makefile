@@ -10,3 +10,4 @@ prod_provision:
 
 install_roles:
 	ansible-galaxy install -i Stouts.iptables,1.0.0 --force
+	ansible-galaxy install -i nickjj.fail2ban,v0.1.2 --force
