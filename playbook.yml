@@ -3,3 +3,7 @@
 - name: Provision Sharepear
   hosts: all
   sudo: yes
+  vars_files:
+    - vars/iptables.yml
+  roles:
+    - { role: Stouts.iptables, tags: iptables }
