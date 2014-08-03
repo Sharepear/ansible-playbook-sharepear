@@ -6,6 +6,8 @@
   vars_files:
     - vars/iptables.yml
     - vars/fail2ban.yml
+    - vars/ssh.yml
   roles:
     - { role: Stouts.iptables, tags: iptables }
     - { role: nickjj.fail2ban, tags: fail2ban }
+    - { role: kosssi.ssh, tags: ssh }
