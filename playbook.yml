@@ -4,11 +4,12 @@
   hosts: all
   sudo: yes
   vars_files:
-    - vars/common.yml
     - vars/apache.yml
     - vars/apt.yml
+    - vars/common.yml # variable use in another vars file
     - vars/fail2ban.yml
     - vars/iptables.yml
+    - vars/mysql.yml
     - vars/php.yml
     - vars/ssh.yml
   roles:
@@ -19,3 +20,4 @@
     - { role: kosssi.php, tags: php }
     - { role: kosssi.composer, tags: composer }
     - { role: kosssi.apache, tags: apache }
+    - { role: Ansibles.mysql, tags: mysql }
