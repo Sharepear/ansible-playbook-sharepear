@@ -4,10 +4,12 @@
   hosts: all
   sudo: yes
   vars_files:
-    - vars/iptables.yml
+    - vars/apt.yml
     - vars/fail2ban.yml
+    - vars/iptables.yml
     - vars/ssh.yml
   roles:
+    - { role: kosssi.apt, tags: apt }
     - { role: Stouts.iptables, tags: iptables }
     - { role: nickjj.fail2ban, tags: fail2ban }
     - { role: kosssi.ssh, tags: ssh }

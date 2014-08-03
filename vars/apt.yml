@@ -1,0 +1,8 @@
+---
+
+apt_install:
+  - python-apt
+  - python-pycurl
+  - unattended-upgrades
+  - git
+  - curl
