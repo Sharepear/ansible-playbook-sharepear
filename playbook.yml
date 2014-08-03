@@ -5,6 +5,7 @@
   sudo: yes
   vars_files:
     - vars/common.yml
+    - vars/apache.yml
     - vars/apt.yml
     - vars/fail2ban.yml
     - vars/iptables.yml
@@ -17,3 +18,4 @@
     - { role: kosssi.ssh, tags: ssh }
     - { role: kosssi.php, tags: php }
     - { role: kosssi.composer, tags: composer }
+    - { role: kosssi.apache, tags: apache }
