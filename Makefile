@@ -16,3 +16,4 @@ install_roles:
 	ansible-galaxy install -i kosssi.php,v1.0.0 --force
 	ansible-galaxy install -i kosssi.composer,v1.0.3 --force
 	ansible-galaxy install -i kosssi.apache,v1.0.0 --force
+	ansible-galaxy install -i Ansibles.mysql,v1.0.2 --force

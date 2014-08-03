@@ -7,8 +7,8 @@ apache_site_enable:
 
 apache_vhosts:
   - servername: "{{ inventory_hostname }}"
-    index: index.php
-    documentroot: /var/www/test
+    index: app.php
+    documentroot: /var/www/sharepear/current/web
     directory_extra:
       - "RewriteEngine On"
       - "RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\\2$"
