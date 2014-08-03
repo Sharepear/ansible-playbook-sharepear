@@ -14,3 +14,4 @@ install_roles:
 	ansible-galaxy install -i kosssi.ssh,v1.0.0 --force
 	ansible-galaxy install -i kosssi.apt,v1.0.0 --force
 	ansible-galaxy install -i kosssi.php,v1.0.0 --force
+	ansible-galaxy install -i kosssi.composer,v1.0.3 --force

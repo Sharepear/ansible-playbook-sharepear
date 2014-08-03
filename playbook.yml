@@ -16,3 +16,4 @@
     - { role: nickjj.fail2ban, tags: fail2ban }
     - { role: kosssi.ssh, tags: ssh }
     - { role: kosssi.php, tags: php }
+    - { role: kosssi.composer, tags: composer }
