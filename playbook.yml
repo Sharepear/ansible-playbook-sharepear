@@ -21,3 +21,4 @@
     - { role: kosssi.composer, tags: composer }
     - { role: kosssi.apache, tags: apache }
     - { role: Ansibles.mysql, tags: mysql }
+    - { role: config, tags: config }
