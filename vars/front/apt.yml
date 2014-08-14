@@ -1,0 +1,6 @@
+---
+
+apt_install:
+  - nodejs
+  - npm
+  - nodejs-legacy

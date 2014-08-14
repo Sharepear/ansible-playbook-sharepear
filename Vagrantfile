@@ -11,7 +11,8 @@ Vagrant.configure("2") do |config|
   config.vm.network :private_network, ip: $IP
   config.ssh.forward_agent = true
 
-  config.vm.synced_folder "../sharepear", "/var/www/sharepear/current", type: "nfs"
+  config.vm.synced_folder "../sharepear-back", "/var/www/api.sharepear.dev/current", type: "nfs"
+  config.vm.synced_folder "../sharepear-front", "/var/www/sharepear.dev/current", type: "nfs"
 
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--cpuexecutioncap", $EXEC_CAP]

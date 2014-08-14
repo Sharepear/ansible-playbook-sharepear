@@ -1,2 +1,8 @@
 [prod]
 sharepear.io
+
+[front:children]
+prod
+
+[back:children]
+prod

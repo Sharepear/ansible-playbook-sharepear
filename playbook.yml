@@ -4,19 +4,36 @@
   hosts: all
   sudo: yes
   vars_files:
-    - vars/apache.yml
     - vars/apt.yml
-    - vars/common.yml # variable use in another vars file
     - vars/fail2ban.yml
     - vars/iptables.yml
-    - vars/mysql.yml
-    - vars/php.yml
     - vars/ssh.yml
   roles:
     - { role: kosssi.apt, tags: apt }
     - { role: Stouts.iptables, tags: iptables }
     - { role: nickjj.fail2ban, tags: fail2ban }
     - { role: kosssi.ssh, tags: ssh }
+    - { role: config, tags: config }
+
+- name: Provision Sharepear Front
+  hosts: front
+  sudo: yes
+  vars_files:
+    - vars/front/apache.yml
+    - vars/front/apt.yml
+  roles:
+    - { role: kosssi.apt, tags: apt }
+    - { role: kosssi.apache, tags: apache }
+
+- name: Provision Sharepear Back
+  hosts: back
+  sudo: yes
+  vars_files:
+    - vars/common.yml # variable use in another vars file
+    - vars/back/apache.yml
+    - vars/back/mysql.yml
+    - vars/back/php.yml
+  roles:
     - { role: kosssi.php, tags: php }
     - { role: kosssi.composer, tags: composer }
     - { role: kosssi.apache, tags: apache }

@@ -1,5 +1,11 @@
 ---
 
+php_install:
+  - php5
+  - php5-intl
+  - php5-curl
+  - php5-mysql
+
 php_configure:
   - file: /etc/php5/cli/php.ini
     values:

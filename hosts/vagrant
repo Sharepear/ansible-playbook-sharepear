@@ -1,2 +1,8 @@
 [vagrant]
 sharepear.dev
+
+[front:children]
+vagrant
+
+[back:children]
+vagrant

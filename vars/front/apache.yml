@@ -1,0 +1,13 @@
+---
+
+apache_repository: false
+
+apache_site_enable:
+  - "{{ inventory_hostname }}"
+
+apache_vhosts:
+  - servername: "{{ inventory_hostname }}"
+    documentroot: /var/www/{{ inventory_hostname }}/current/dist
+    logDir: /var/www/{{ inventory_hostname }}
+    extra:
+      - "ServerName {{ inventory_hostname }}"
