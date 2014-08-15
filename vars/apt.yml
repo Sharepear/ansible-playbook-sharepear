@@ -6,3 +6,6 @@ apt_install:
   - unattended-upgrades
   - git
   - curl
+  - npm
+  - nodejs
+  - nodejs-legacy
