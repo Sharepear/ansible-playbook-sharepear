@@ -4,11 +4,13 @@ Create server for Sharepear website.
 
 ## Install
 
-To clone repository:
+Clone repository:
 
-    make install
+    git clone git@github.com:Sharepear/ansible-playbook-sharepear.git
 
 ## Development
+
+Launch the vagrant box
 
     vagrant up
 
