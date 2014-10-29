@@ -1,2 +1,2 @@
 [prod]
-sharepear.io
+sharepear.io ansible_ssh_user=ubuntu
