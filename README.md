@@ -23,7 +23,7 @@ Launch the vagrant box
 
 Launch provisioning
 
-	ansible-playbook -i hosts/prod playbook.yml -vvvv
+	ansible-playbook -i hosts/prod site.yml -vvvv
 
 ## License
 

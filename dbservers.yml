@@ -1,0 +1,9 @@
+---
+
+- name: Provision database
+  hosts: dbservers
+  sudo: yes
+  vars_files:
+    - vars/mysql.yml
+  roles:
+    - { role: ANXS.mysql, tags: mysql }

@@ -1,0 +1,13 @@
+---
+
+- name: Provision web server
+  hosts: webservers
+  sudo: yes
+  vars_files:
+    - vars/common.yml # variable use in another vars file
+    - vars/apache.yml
+    - vars/php.yml
+  roles:
+    - { role: kosssi.php, tags: php }
+    - { role: kosssi.composer, tags: composer }
+    - { role: kosssi.apache, tags: apache }

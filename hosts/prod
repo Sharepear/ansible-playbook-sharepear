@@ -1,2 +1,9 @@
-[prod]
-sharepear.io ansible_ssh_user=ubuntu
+[webservers]
+sharepear.io
+
+[dbservers]
+sharepear.io
+
+[prod:children]
+webservers
+dbservers

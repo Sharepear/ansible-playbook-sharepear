@@ -1,6 +1,7 @@
 ---
 
 user_root: vagrant
+ansible_ssh_user: vagrant
 
 mysql_database: sharepear
 mysql_user: sharepear

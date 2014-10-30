@@ -1,2 +1,9 @@
-[vagrant]
+[webservers]
 sharepear.dev
+
+[dbservers]
+sharepear.dev
+
+[vagrant:children]
+webservers
+dbservers
