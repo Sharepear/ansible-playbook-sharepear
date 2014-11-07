@@ -2,7 +2,4 @@
 
 user_root: ubuntu
 ansible_ssh_user: ubuntu
-
-mysql_database: sharepear
-mysql_user: sharepear
-mysql_password: xg8q6k3Wr8ecH4GT9v8T2mLVGc3c77GH
+password_file: prod.yml

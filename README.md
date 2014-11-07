@@ -6,8 +6,8 @@ Create server for Sharepear website.
 
 Clone repository:
 
-    git clone git@github.com:Sharepear/ansible-playbook-sharepear.git
-    git clone git@github.com:Sharepear/Sharepear.git
+    git clone git@github.com:sharepear/ansible-playbook-sharepear.git
+    git clone git@github.com:sharepear/sharepear.git
 
 Download Ansible roles:
 
@@ -15,15 +15,23 @@ Download Ansible roles:
 
 ## Development
 
+Add dev host
+
+    sudo ansible localhost -m lineinfile -a "dest=/etc/hosts regexp='^199\.199\.199\.199' line='199.199.199.199 sharepear.dev'"
+
 Launch the vagrant box
 
     vagrant up
 
 ## Prod
 
+Decrypt vault-password file
+
+    gpg --output vault-password.txt --decrypt vault-password.txt.gpg
+
 Launch provisioning
 
-	ansible-playbook -i hosts/prod site.yml -vvvv
+    ansible-playbook -i hosts/prod site.yml -vvvv --vault-password-file vault-password.txt
 
 ## License
 

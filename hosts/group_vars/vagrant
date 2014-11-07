@@ -2,7 +2,4 @@
 
 user_root: vagrant
 ansible_ssh_user: vagrant
-
-mysql_database: sharepear
-mysql_user: sharepear
-mysql_password: a4kmM485E2Et4ZtqZB3Hf4r5Jew5b6JB
+password_file: vagrant.yml

@@ -4,6 +4,7 @@
   hosts: dbservers
   sudo: yes
   vars_files:
+    - password/{{ password_file }}
     - vars/mysql.yml
   roles:
     - { role: ANXS.mysql, tags: mysql }
