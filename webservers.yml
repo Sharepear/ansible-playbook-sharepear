@@ -11,3 +11,11 @@
     - { role: kosssi.php, tags: php }
     - { role: kosssi.composer, tags: composer }
     - { role: kosssi.apache, tags: apache }
+
+- name: Provision xdebug
+  hosts: vagrant
+  sudo: yes
+  vars_files:
+    - vars/xdebug.yml
+  roles:
+    - { role: kosssi.php, tags: php }
