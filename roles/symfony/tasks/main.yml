@@ -1,0 +1,36 @@
+---
+
+- name: Copy parameters.yml file
+  command: mv app/config/parameters.yml.dist app/config/parameters.yml
+    chdir=/var/www/sharepear/current
+    creates=app/config/parameters.yml
+
+- name: Install composer dependencies
+  composer:
+    command=install
+    working_dir=/var/www/sharepear/current
+
+- name: Check migration status
+  shell: php app/console d:m:s | grep New | grep -o '.$'
+    chdir=/var/www/sharepear/current
+  register: migration_status
+  changed_when: false
+
+- name: Execute doctrine migration
+  command: php app/console doctrine:migration:migrate -n
+    chdir=/var/www/sharepear/current
+  when: "migration_status.rc != 0"
+
+- name: Install assets
+  command: php app/console assets:install --symlink
+    chdir=/var/www/sharepear/current
+    creates=web/bundles
+
+- name: Install npm dependencies
+  npm:
+    path=/var/www/sharepear/current
+
+- name: Compile all assets with grunt
+  command: node_modules/.bin/grunt
+    chdir=/var/www/sharepear/current
+    creates=web/built/all.min.js

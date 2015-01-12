@@ -1,8 +1,8 @@
-Stouts.iptables,1.0.0
+Stouts.iptables,1.0.6
 nickjj.fail2ban,v0.1.2
 kosssi.ssh,v1.0.0
-kosssi.apt,v1.0.0
+kosssi.apt,v2.0.0
 kosssi.php,v1.0.0
-kosssi.composer,v1.0.3
-kosssi.apache,v1.0.0
+kosssi.composer,v1.2.0
+kosssi.apache,v1.0.2
 ANXS.mysql,v1.0.3

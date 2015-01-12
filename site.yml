@@ -16,5 +16,5 @@
     - { role: kosssi.ssh, tags: ssh }
     - { role: config, tags: config }
 
-- include: webservers.yml
 - include: dbservers.yml
+- include: webservers.yml

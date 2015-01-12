@@ -19,3 +19,4 @@
     - vars/xdebug.yml
   roles:
     - { role: kosssi.php, tags: php }
+    - { role: symfony, remote_user: www-data, tags: symfony }
