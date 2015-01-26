@@ -1,7 +1,7 @@
 ---
 
 - name: Copy parameters.yml file
-  command: mv app/config/parameters.yml.dist app/config/parameters.yml
+  command: cp app/config/parameters.yml.dist app/config/parameters.yml
     chdir=/var/www/sharepear/current
     creates=app/config/parameters.yml
 
